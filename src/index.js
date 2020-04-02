@@ -1,12 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+// provider akan menghubungkan React App dengan Redux
+// untuk mengaktifkan react-redux 
+// The <Provider /> makes the Redux store available to any nested components that have been wrapped in the connect() function.
+import {Provider} from 'react-redux'
+// untuk bisa jadi statenya
+// akan mengolah hasil dari combineReducers
+import {createStore} from 'redux'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './components/App'
+// import hasil combineReducer bukan combnineReducer-nya
+import reducers from './reducers/index'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// windows.... dari github devtools
+// window._..... tidak wajib, optional untuk melihat isi state
+let store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+ReactDOM.render(
+    <Provider store = {store}>
+        <App/>
+    </Provider>, 
+    document.getElementById('root')
+)
+
+// nama file index yang ini jangan diganti, yang lain secara teori boleh diganti

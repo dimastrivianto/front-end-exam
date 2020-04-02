@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "username": "dimas",
+      "email": "dimas@gmail.com",
+      "pswd": "12345678",
+      "id": 1
+    },
+    {
+      "username": "trivianto",
+      "email": "trivianto@gmail.com",
+      "pswd": "laruku",
+      "id": 2
+    },
+    {
+      "username": "trivianto2",
+      "email": "trivia4nto@gmail.com",
+      "pswd": "laruku3",
+      "id": 4
+    },
+    {
+      "username": "tes",
+      "email": "tes@gmail.com",
+      "pswd": "testes",
+      "id": 5
+    },
+    {
+      "username": "",
+      "email": "tr@gmail.com",
+      "pswd": "laruku",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Hoodie Mahal",
+      "desc": "Lorem ipsum dolor sit amet",
+      "price": 135000,
+      "src": "https://www.pngfind.com/pngs/m/162-1621689_cloud9-lcs-jersey-cloud-9-csgo-jersey-hd.png"
+    },
+    {
+      "id": 2,
+      "name": "Sepatu Piero",
+      "desc": "Lorem ipsum dolor sit amet",
+      "price": 150000,
+      "src": "https://www.pngfind.com/pngs/m/162-1621689_cloud9-lcs-jersey-cloud-9-csgo-jersey-hd.png"
+    },
+    {
+      "id": 3,
+      "name": "Sandals Swelow",
+      "desc": "Lorem ipsum dolor sit amet",
+      "price": 235000,
+      "src": "https://www.pngfind.com/pngs/m/162-1621689_cloud9-lcs-jersey-cloud-9-csgo-jersey-hd.png"
+    },
+    {
+      "id": 4,
+      "name": "T-shirt o neck",
+      "desc": "Lorem ipsum dolor sit amet",
+      "price": 178000,
+      "src": "https://www.pngfind.com/pngs/m/162-1621689_cloud9-lcs-jersey-cloud-9-csgo-jersey-hd.png"
+    },
+    {
+      "id": 5,
+      "name": "T-shirt v neck",
+      "desc": "Lorem ipsum dolor sit amet",
+      "price": 179000,
+      "src": "https://www.pngfind.com/pngs/m/162-1621689_cloud9-lcs-jersey-cloud-9-csgo-jersey-hd.png"
+    },
+    {
+      "name": "Sport Jersey",
+      "desc": "Lorem ipsum dolor sit amet",
+      "price": 100000,
+      "src": "https://www.pngfind.com/pngs/m/162-1621689_cloud9-lcs-jersey-cloud-9-csgo-jersey-hd.png",
+      "id": 6
+    }
+  ]
+}
