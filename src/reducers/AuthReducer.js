@@ -7,10 +7,12 @@
 // jika ingin engambil data bisa langsung dari global state(brankas), namun, ketika akan mengubah atau mengirim data harus melalui reducer terlebih dahulu
 
 // init hanya akan jalan sekali, saat sudah berjalan tidak akan jalan lagi
-let init = {
+let init ={
     id:"",
-    username: ""
+    username: "",
+    cart : [{},{},{}]
 }
+
 
 // kita bisa memasukkan nilai default kedalam parameter dengan cara seperti state dibawah
 export default (state = init, action) => {

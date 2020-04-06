@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import axios from '../config/axios'
 
 // $ npx json-server -p 2020 ./src/api/db.json (mengaktifkan json-placeholder dan dijalankan duluan sebelum npm start(react))
 // kalau isi manual di dalam db.json maka harus di npx json-server..... lagi, kalau langsung dari halaman web tidak perlu
@@ -16,8 +16,8 @@ class Register extends Component {
         // simpan di json
         // GET, POST, PUT, PATCH
         // link bisa jadi satu karena sama
-        let linkPost ='http://localhost:2020/users'
-        let linkGet ='http://localhost:2020/users'
+        let linkPost ='/users'
+        let linkGet ='/users'
         let data = {username, email, pswd}
 
         // get data

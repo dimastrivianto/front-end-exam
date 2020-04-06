@@ -66,8 +66,8 @@ class Header extends Component {
                                 <DropdownItem>Manage Product</DropdownItem>
                             </NavLink>
                             {/* ganti dengan cart */}
-                            <NavLink tag={Link} to="/">
-                                <DropdownItem>Option 2</DropdownItem>
+                            <NavLink tag={Link} to="/Cart">
+                                <DropdownItem>Cart</DropdownItem>
                             </NavLink>
                             <DropdownItem divider />
                             {/* this.props.onLogoutUser tidak dikasih () untuk menjalankan function karena saat proses pertama kali komponen dibuat kita tidak mau function ini di running, namun setelah di click baru jalan */}
@@ -90,7 +90,7 @@ class Header extends Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand tag={Link} to="/">reactstrap</NavbarBrand>
+                    <NavbarBrand className="text-success" tag={Link} to="/">Tokonyadia</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         {/* memakai tanda () karena saat komponen ini dibuat kita mau function langsung di running  */}

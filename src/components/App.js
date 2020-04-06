@@ -9,12 +9,18 @@ import Register from './Register'
 import Login from './Login'
 import ManageProduct from './ManageProduct'
 import DetailProduct from './DetailProduct'
+import Cart from './Cart'
 
 // Keeplogin
 import {keepLogin} from '../actions/index'
 import { connect } from 'react-redux'
 
 class App extends Component{
+
+    state = {
+        // agar bisa nembak url langsung, maka d kasih if else juga di bawah
+        check : false
+    }
 
     componentDidMount(){
         // bisa juga begini
@@ -25,30 +31,35 @@ class App extends Component{
         if(user) {
             this.props.keepLogin(user)
         }
+        this.setState({check : true})
     }
 
     render(){
-        return(
-            <BrowserRouter>
-                <div>
-                    <Header/>
-                    {/* karena dia akan mengecek memakai "link.includes(path)"
-                    saat di cek mis: /register, maka saat di looping ketemu "/" yang nge-link ke home (maka page home akan muncul), maka pada saat ketemu /register dia
-                    akan return path "/" dan "/register" (yang akan mereturn page home dan page register), sehingga harus memakai "exact", sehingga dicarinya menggunakan perbandingan link==path,
-                    tidak lagi dengan link.includes(path)
-                    berikan exact di tempat yang sedikit, dalam hal ini "/" */}
-                    {/* memakai perbandingan link==path */}
-                    <Route path="/" exact component={Home} />
-                    {/* memakai link.includes(path) */}
-                    <Route path="/register" component={Register} />
-                    {/* memakai link.includes(path) */}
-                    <Route path="/login" component={Login} />
-                    <Route path="/manageproduct" component={ManageProduct} />
-                    {/* namaidPrdct bisa di ganti */}
-                    <Route path="/detailproduct/:idPrdct" component={DetailProduct} />
-                </div>
-            </BrowserRouter>
-        )
+        if(this.state.check){
+            return(
+                <BrowserRouter>
+                    <div>
+                        <Header/>
+                        {/* karena dia akan mengecek memakai "link.includes(path)"
+                        saat di cek mis: /register, maka saat di looping ketemu "/" yang nge-link ke home (maka page home akan muncul), maka pada saat ketemu /register dia
+                        akan return path "/" dan "/register" (yang akan mereturn page home dan page register), sehingga harus memakai "exact", sehingga dicarinya menggunakan perbandingan link==path,
+                        tidak lagi dengan link.includes(path)
+                        berikan exact di tempat yang sedikit, dalam hal ini "/" */}
+                        {/* memakai perbandingan link==path */}
+                        <Route path="/" exact component={Home} />
+                        {/* memakai link.includes(path) */}
+                        <Route path="/register" component={Register} />
+                        {/* memakai link.includes(path) */}
+                        <Route path="/login" component={Login} />
+                        <Route path="/manageproduct" component={ManageProduct} />
+                        {/* namaidPrdct bisa di ganti */}
+                        <Route path="/detailproduct/:idPrdct" component={DetailProduct} />
+                        <Route path="/Cart" component={Cart} />
+                    </div>
+                </BrowserRouter>
+            )
+        }
+        return <h1>Loading</h1>
     }
 }
 // kalau lebih dari satu (argument) {keepLogin,argument kedua} bisa hanya dengan menggunakan onLoginUser, tinggal ganti di import dengan onLoginUser dan yang bawah hapus keeplogin

@@ -1,0 +1,23 @@
+div.login {
+    background-image: url('https://previews.123rf.com/images/vectomart/vectomart1210/vectomart121000059/15803400-illustration-of-different-shopping-bag-on-sale-background.jpg');
+    height: 94vh;
+}
+
+div.home {
+    background: linear-gradient(to right, #f00000, #dc281e);
+    height: 100%;
+}
+
+div.cardbg {
+    background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+}
+
+table img.list {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 200px !important;
+}
+
+.checkout {
+    width: 93px !important
+}

@@ -8,6 +8,7 @@ export default class ModalEdit extends Component {
         editName: "",
         editDesc: "",
         editPrice: "",
+        editStock: "",
         editSrc: ""
     }
 
@@ -15,19 +16,20 @@ export default class ModalEdit extends Component {
         return (
             <div>
                 {/* <Modal isOpen={this.state.modal} toggle = {this.onCancelToggle} > jika ingin klik sembarang menutup modal*/}
-                <Modal isOpen={this.props.a} >
+                <Modal isOpen={this.props.modal} >
                     <ModalHeader >Edit your product</ModalHeader>
                     <ModalBody>
                         {/* e akan langsung terbuat saat eventnya d trigger (onClick,onChange,onSubmit,dll) */}
-                        Name : <input className="form-control" type="text" onChange ={(e)=>{this.setState({editName: e.target.value})}} placeholder={this.props.b.name}/>
-                        Desc : <input className="form-control" type="text" onChange ={(e)=>{this.setState({editDesc: e.target.value})}} placeholder={this.props.b.desc}/>
-                        Price : <input className="form-control" type="text" onChange ={(e)=>{this.setState({editPrice: e.target.value})}}placeholder={this.props.b.price}/>
-                        Img : <input className="form-control" type="text" onChange ={(e)=>{this.setState({editSrc: e.target.value})}}placeholder={this.props.b.src}/>
+                        Name : <input className="form-control" type="text" onChange ={(e)=>{this.setState({editName: e.target.value})}} placeholder={this.props.editProduct.name}/>
+                        Desc : <input className="form-control" type="text" onChange ={(e)=>{this.setState({editDesc: e.target.value})}} placeholder={this.props.editProduct.desc}/>
+                        Price : <input className="form-control" type="text" onChange ={(e)=>{this.setState({editPrice: e.target.value})}}placeholder={this.props.editProduct.price}/>
+                        Stock : <input className="form-control" type="text" onChange ={(e)=>{this.setState({editStock: e.target.value})}}placeholder={this.props.editProduct.stock}/>
+                        Img : <input className="form-control" type="text" onChange ={(e)=>{this.setState({editSrc: e.target.value})}}placeholder={this.props.editProduct.src}/>
                     </ModalBody>
                     <ModalFooter>
-                        <Button outline color="warning" onClick={this.props.c} >Cancel</Button>
+                        <Button outline color="warning" onClick={this.props.cancel} >Cancel</Button>
                         {/* this.state akan masuk ke editObj pada function fnSave di manageproduct */}
-                        <Button outline color="success" onClick={()=>{this.props.d(this.state)}} >Save</Button>
+                        <Button outline color="success" onClick={()=>{this.props.save(this.state)}} >Save</Button>
                     </ModalFooter>
                 </Modal>
 

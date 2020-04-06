@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import axios from '../config/axios'
 // digunakan untuk menghubungkan komponen dengan redux
 // connect = officer/dispatch satu2nya dari bagan yang tidak di ketik manual (otomatis)
 import {connect} from 'react-redux'
@@ -16,10 +16,12 @@ class Login extends Component {
         let pswd = this.pswd.value
 
         // get data with parameters
-        let link = 'http://localhost:2020/users'
+        let link = '/users'
+
         // bisa dengan username: usernam dan pswd: pswd, hanya karena sama jadi bisa langsung satu saja
         // saat kasih params nama property yang ada di dalam object harus sama dengan yang ada di file db.json, tidak boleh beda
         let params = {username, pswd}
+
         // tidak bisa langsung params seperti pada saat pakai post(dan harus menggunakan nama params karena sudah bawaan dari axios), bisa juga dengan {params: data} dengan catatan bikin let data  dulu
         axios.get(link, {params}).then((res)=>{
             if(res.data.length > 0){
@@ -42,8 +44,8 @@ class Login extends Component {
             return (
                 // masukkan background disini, .login
                 <div className="container-fluid">
-                    <div className="row">
-                    <div className=" col-5 mx-auto mt-5 card">
+                    <div className="row login">
+                    <div className=" col-5 mx-auto my-auto card">
                         <div className="card-body">
                             <div className="border-bottom border-secondary card-title text-center">
                                 <h1>LOGIN</h1>

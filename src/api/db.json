@@ -23,56 +23,93 @@
       "email": "tes@gmail.com",
       "pswd": "testes",
       "id": 5
-    },
-    {
-      "username": "",
-      "email": "tr@gmail.com",
-      "pswd": "laruku",
-      "id": 6
     }
   ],
   "products": [
     {
       "id": 1,
-      "name": "Hoodie Mahal",
-      "desc": "Lorem ipsum dolor sit amet",
-      "price": 135000,
-      "src": "https://www.pngfind.com/pngs/m/162-1621689_cloud9-lcs-jersey-cloud-9-csgo-jersey-hd.png"
-    },
-    {
-      "id": 2,
-      "name": "Sepatu Piero",
-      "desc": "Lorem ipsum dolor sit amet",
-      "price": 150000,
-      "src": "https://www.pngfind.com/pngs/m/162-1621689_cloud9-lcs-jersey-cloud-9-csgo-jersey-hd.png"
+      "name": "Jersey Away",
+      "desc": "Jersey tandang MU",
+      "price": 755000,
+      "stock": 10,
+      "src": "https://cdn11.bigcommerce.com/s-mf8nk5mp4s/images/stencil/1280x1280/products/5522/6599/adidasmanchesterunited2020blk__83869.1560375828.jpg?c=2&imbypass=on",
+      "qty": 6
     },
     {
       "id": 3,
-      "name": "Sandals Swelow",
-      "desc": "Lorem ipsum dolor sit amet",
-      "price": 235000,
-      "src": "https://www.pngfind.com/pngs/m/162-1621689_cloud9-lcs-jersey-cloud-9-csgo-jersey-hd.png"
+      "name": "Sepatu Manchester United",
+      "desc": "Sepatu Dijamin Ori",
+      "price": 2000000,
+      "stock": 5,
+      "src": "https://previews.123rf.com/images/tpabma/tpabma1801/tpabma180100162/93669175-fc-manchester-united-football-boots-.jpg"
     },
     {
       "id": 4,
-      "name": "T-shirt o neck",
-      "desc": "Lorem ipsum dolor sit amet",
+      "name": "Bola Manchester United",
+      "desc": "Bola official MU",
       "price": 178000,
-      "src": "https://www.pngfind.com/pngs/m/162-1621689_cloud9-lcs-jersey-cloud-9-csgo-jersey-hd.png"
+      "stock": 17,
+      "src": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/27/16950253/16950253_e8f1eafd-3280-4d01-bf00-ddad986c93c1_2048_2048"
     },
     {
-      "id": 5,
-      "name": "T-shirt v neck",
-      "desc": "Lorem ipsum dolor sit amet",
-      "price": 179000,
-      "src": "https://www.pngfind.com/pngs/m/162-1621689_cloud9-lcs-jersey-cloud-9-csgo-jersey-hd.png"
+      "name": "Jersey MU",
+      "desc": "Baju Ori",
+      "price": 250000,
+      "stock": 10,
+      "src": "https://1.bp.blogspot.com/-9-IkCbexgzU/XN0q3MEACRI/AAAAAAAB5NA/68hAOABeQTA73Kbtbkpm_DmsVbSHhuRHwCLcBGAs/s738/manchester-united-19-20-home-kit-6.jpg",
+      "id": 5
+    }
+  ],
+  "carts": [
+    {
+      "username": "dimas",
+      "name": "Jersey Away",
+      "productId": 1,
+      "src": "https://cdn11.bigcommerce.com/s-mf8nk5mp4s/images/stencil/1280x1280/products/5522/6599/adidasmanchesterunited2020blk__83869.1560375828.jpg?c=2&imbypass=on",
+      "desc": "Jersey tandang MU",
+      "price": 755000,
+      "qty": 10,
+      "id": 1
     },
     {
-      "name": "Sport Jersey",
-      "desc": "Lorem ipsum dolor sit amet",
-      "price": 100000,
-      "src": "https://www.pngfind.com/pngs/m/162-1621689_cloud9-lcs-jersey-cloud-9-csgo-jersey-hd.png",
-      "id": 6
+      "username": "dimas",
+      "name": "Sepatu Manchester United",
+      "productId": 3,
+      "src": "https://previews.123rf.com/images/tpabma/tpabma1801/tpabma180100162/93669175-fc-manchester-united-football-boots-.jpg",
+      "desc": "Sepatu Dijamin Ori",
+      "price": 2000000,
+      "qty": 7,
+      "id": 2
+    },
+    {
+      "username": "trivianto",
+      "name": "Jersey Away",
+      "productId": 1,
+      "src": "https://cdn11.bigcommerce.com/s-mf8nk5mp4s/images/stencil/1280x1280/products/5522/6599/adidasmanchesterunited2020blk__83869.1560375828.jpg?c=2&imbypass=on",
+      "desc": "Jersey tandang MU",
+      "price": 755000,
+      "qty": 20,
+      "id": 4
+    },
+    {
+      "username": "dimas",
+      "name": "Bola Manchester United",
+      "productId": 4,
+      "src": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/27/16950253/16950253_e8f1eafd-3280-4d01-bf00-ddad986c93c1_2048_2048",
+      "desc": "Bola official MU",
+      "price": 178000,
+      "qty": 10,
+      "id": 7
+    },
+    {
+      "username": "trivianto",
+      "name": "Jersey MU",
+      "productId": 5,
+      "src": "https://1.bp.blogspot.com/-9-IkCbexgzU/XN0q3MEACRI/AAAAAAAB5NA/68hAOABeQTA73Kbtbkpm_DmsVbSHhuRHwCLcBGAs/s738/manchester-united-19-20-home-kit-6.jpg",
+      "desc": "Baju Ori",
+      "price": 250000,
+      "qty": 5,
+      "id": 8
     }
   ]
 }

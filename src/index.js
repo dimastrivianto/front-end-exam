@@ -7,6 +7,7 @@ import {Provider} from 'react-redux'
 // untuk bisa jadi statenya
 // akan mengolah hasil dari combineReducers
 import {createStore} from 'redux'
+import 'bootstrap/dist/css/bootstrap.css';
 
 import App from './components/App'
 // import hasil combineReducer bukan combnineReducer-nya
